@@ -57,12 +57,11 @@ function myFunc()
 
 	for (i = 0; i < counter; i++) { 
 		event = document.createEvent("UIEvents"); 
-m="0x1F";
-a=Math.floor(Math.random() * (400 - 300) + 300);
-m=m+a;
-
-	message = String.fromCodePoint(m); // Replace My Message with your message
-
+		m="0x1F";
+		a=Math.floor(Math.random() * (400 - 300) + 300);
+		//642-600 for smiley emoji
+		m=m+a;
+		message = String.fromCodePoint(m); // Replace My Message with your message
 		messageBox.innerHTML = message; // test it
 		event.initUIEvent("input", true, true, window, 1); 
 		messageBox.dispatchEvent(event); 
